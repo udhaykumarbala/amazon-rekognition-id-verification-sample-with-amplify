@@ -6,6 +6,7 @@ type UserInfo @model
   { allow: private, provider: iam },
   { allow: groups, groups: ["admin", "poweruser"] },
   { allow: groups, groups: ["viewer"], operations: [read] }
+  { allow: owner, queries: null }
 ]) {
   companyid: String!
   userid: String!
